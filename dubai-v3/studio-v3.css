@@ -1,0 +1,214 @@
+
+/* KUT Agency / Dubai V3 — bespoke typography and art direction */
+:root{--ease-editorial:cubic-bezier(.22,1,.36,1)}
+body{font-kerning:normal;text-rendering:optimizeLegibility}
+body h1,body h2,body h3{font-synthesis:none;text-wrap:balance;overflow-wrap:normal}
+body h1,body h2{position:relative}
+body p{max-width:72ch}
+body a,body button{transition:color .3s,background-color .3s,border-color .3s,transform .3s}
+body p,body .intro,body .lead,body .muted{overflow-wrap:anywhere}
+body .reveal{transition:opacity 1s var(--ease-editorial),transform 1s var(--ease-editorial)}
+body :is(.hero,.heroCopy,.heroText,.heroLeft,.copy,.hero .content){min-width:0}
+body :is(.hero h1,.hero h2,.heroCopy h1,.heroText h1,.copy h1){word-break:normal;max-width:100%}
+body .page-footer{gap:22px;line-height:1.7;align-items:center}
+body .concept-strip{background:#161616;color:#eee;letter-spacing:.055em}
+body .concept-strip b{color:#d3b38c}
+body .concept-strip a{color:#f0ded0}
+body .page-footer a{font-weight:700}
+body .signature{pointer-events:none;position:absolute;z-index:2;user-select:none;transform:translate3d(calc(var(--mx,0)*9px),calc(var(--my,0)*7px),0);transition:transform .8s var(--ease-editorial)}
+body .signature-label{display:block;font:500 10px/1.7 'DM Mono',monospace;letter-spacing:.12em}
+body .signature-caption{display:block;font:600 11px/1.5 'DM Sans',sans-serif;letter-spacing:.06em}
+body .signature-lines{width:100px;height:100px;position:relative}
+body .signature-lines:before,body .signature-lines:after{content:'';display:block;position:absolute;inset:0;border:1px solid currentColor;border-radius:50%;opacity:.42}
+body .signature-lines:after{inset:16px;opacity:.25}
+body .art-interlude{isolation:isolate;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;min-height:360px;align-items:center;gap:4vw;padding:74px 7vw}
+body .art-interlude:before{content:'';position:absolute;z-index:-1;width:600px;height:600px;border:1px solid currentColor;border-radius:50%;right:-240px;top:-200px;opacity:.14}
+body .art-interlude .interlude-overline{display:block;font:500 10px 'DM Mono',monospace;letter-spacing:.16em;margin-bottom:22px}
+body .art-interlude h3{font:400 clamp(37px,4vw,64px)/1.06 'Cormorant Garamond',serif;letter-spacing:-.025em;max-width:740px;margin:0}
+body .art-interlude p{font-size:14px;line-height:1.85;max-width:400px;justify-self:end;opacity:.8}
+body .art-interlude i{font-style:italic}
+body .editorial-stamp{font:500 10px 'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase}
+body .story-chips{display:flex;gap:11px;flex-wrap:wrap;margin-top:25px}
+body .story-chips span{display:inline-flex;border:1px solid currentColor;padding:9px 13px;font:500 9px 'DM Mono',monospace;letter-spacing:.09em;opacity:.75}
+body .signature-button{pointer-events:auto;border:1px solid currentColor;background:transparent;color:inherit;font:600 10px 'DM Mono';letter-spacing:.1em;padding:13px 18px}
+body .signature-button:hover{transform:translateY(-2px)}
+/* Oryx — restrained technical luxury; elegant not oversized */
+body.oryx{font-family:'Manrope',sans-serif}
+body.oryx h1{font-family:'Manrope',sans-serif!important;font-weight:750!important;font-size:clamp(54px,7.15vw,109px)!important;letter-spacing:-.055em!important;line-height:.99!important;margin:24px 0 34px!important}
+body.oryx h2{font-family:'Manrope',sans-serif!important;font-weight:650!important;font-size:clamp(44px,5.35vw,80px)!important;letter-spacing:-.05em!important;line-height:1.06!important}
+body.oryx .compareCopy h2{font-size:clamp(44px,5vw,72px)!important}
+body.oryx .service h3{font-family:'Manrope';letter-spacing:-.035em;font-size:26px;line-height:1.12}
+body.oryx .hero{min-height:680px}
+body.oryx .hero .content{width:min(780px,100%)}
+body.oryx .heroimg{filter:contrast(1.07) saturate(.8)}
+body.oryx .primary{border-radius:2px}
+body.oryx .signature{right:11%;top:16%;color:#f2dec5;text-align:center}
+body.oryx .signature .reticle{width:110px;height:110px;position:relative;border-radius:50%;border:1px solid #e5c99c88;margin:0 auto 13px}
+body.oryx .reticle:before{content:'';position:absolute;inset:-11px;border-radius:50%;border:1px dashed #e5c99c70;animation:artspin 30s linear infinite}
+body.oryx .reticle:after{content:'✕';position:absolute;inset:0;display:grid;place-items:center;font:300 29px 'Manrope';color:#d9b98b}
+body.oryx .art-interlude{background:#c9b69a;color:#1c231e}
+body.oryx .art-interlude h3{font-family:'Manrope';font-size:clamp(30px,3.55vw,57px);font-weight:650;letter-spacing:-.05em}
+/* Vault — thin engineering lines, rich typographic spacing */
+body.vault h1{font-size:clamp(57px,6.5vw,104px)!important;line-height:.96!important;letter-spacing:-.055em!important;font-weight:500!important}
+body.vault h2{font-size:clamp(43px,5.4vw,80px)!important;line-height:1.03!important;letter-spacing:-.055em!important}
+body.vault .catalogCard h3{font-size:24px;line-height:1.15;letter-spacing:-.03em}
+body.vault .heroText{padding:7.8vw 4.7vw 5.6vw}
+body.vault .hero{min-height:640px;height:730px}
+body.vault .signature{top:13%;right:7%;width:170px;color:#d5f2ea}
+body.vault .signature .scanbox{height:140px;border:1px solid #b2dcd155;position:relative;background:repeating-linear-gradient(to bottom,#a7e6d40f 0 1px,transparent 1px 17px)}
+body.vault .signature .scanbox:before{content:'';position:absolute;left:0;right:0;height:1px;background:#a9efd9;box-shadow:0 0 12px 3px #adf5df66;top:12px;animation:artscan 6s ease-in-out infinite alternate}
+body.vault .signature .signature-label{margin-top:15px}
+body.vault .art-interlude{background:#182f30;color:#c7e4d7;border-block:1px solid #ffffff1f}
+body.vault .art-interlude h3{font-family:'Space Grotesk';font-weight:400;letter-spacing:-.055em}
+/* Approved — motorsport design without typographic shouting */
+body.approved h1{font-family:'Outfit',sans-serif!important;font-size:clamp(55px,6.8vw,103px)!important;font-weight:800!important;letter-spacing:-.065em!important;line-height:.99!important;margin:37px 0 30px!important}
+body.approved h2{font-family:'Outfit',sans-serif!important;font-size:clamp(49px,5.6vw,83px)!important;letter-spacing:-.058em!important;line-height:1.02!important}
+body.approved .tech h2{font-size:clamp(50px,5.4vw,76px)!important}
+body.approved .col h3{font-family:'Outfit';font-size:31px;line-height:1.15;letter-spacing:-.028em}
+body.approved .hero{min-height:650px}
+body.approved .heroLeft{padding:6vw 5vw 5vw}
+body.approved .signature{bottom:11%;right:8%;color:#fff;width:195px;text-align:right;border-top:2px solid #ef523e;padding-top:15px}
+body.approved .signature-label{font-weight:700}
+body.approved .art-interlude{background:#ffdbb2;color:#192d27;border-top:3px solid #d9382e}
+body.approved .art-interlude h3{font:700 clamp(36px,4vw,64px)/1.06 'Outfit';letter-spacing:-.035em}
+/* 24 West — contemporary editorial */
+body.west h1{font-size:clamp(64px,7.4vw,112px)!important;line-height:1!important;letter-spacing:-.035em!important;margin:41px 0 27px!important}
+body.west h2{font-size:clamp(56px,6.25vw,93px)!important;line-height:1.01!important;letter-spacing:-.03em!important}
+body.west .contact h2{font-size:clamp(60px,7.1vw,112px)!important}
+body.west .statement h2{font-size:clamp(54px,6vw,82px)!important}
+body.west .hero{padding-top:65px;padding-bottom:85px}
+body.west .heroImg{height:580px}
+body.west .proj h3{font-size:34px;line-height:1.15;letter-spacing:-.012em}
+body.west .signature{top:9%;right:3%;color:#fff;border:1px solid #ffffffa8;padding:24px 20px;background:#22231b4a;backdrop-filter:blur(2px)}
+body.west .signature .large-index{font:400 42px 'Cormorant Garamond';line-height:.95;margin:11px 0}
+body.west .art-interlude{background:#aaafa0;color:#22302b}
+body.west .art-interlude h3{font-family:'Cormorant Garamond';font-weight:400;font-size:clamp(49px,5vw,76px)}
+body.west.is-dusk .heroImg img{filter:sepia(.55) brightness(.77)}
+body.west .mood-control{display:flex;align-items:center;gap:13px;margin-top:24px;font:500 10px 'DM Mono'}
+body.west .mood-control button{background:transparent;color:inherit;border:1px solid #8c8d7d;padding:11px 16px}
+/* Petrovichi — quiet tactile architecture */
+body.pet h1{font-size:clamp(66px,7.6vw,114px)!important;letter-spacing:-.035em!important;line-height:1.01!important}
+body.pet h2{font-size:clamp(57px,6.55vw,102px)!important;line-height:1.02!important;letter-spacing:-.03em!important}
+body.pet .methodCopy h2{font-size:clamp(55px,5.7vw,88px)!important}
+body.pet .hero{min-height:680px}
+body.pet .heroCopy{padding-top:6.5vw}
+body.pet .feature h3{font-size:30px;line-height:1.35}
+body.pet .signature{top:9%;left:8%;border-left:1px solid #fff9;padding:10px 0 10px 20px;color:#eee3d3;text-shadow:0 2px 8px #000}
+body.pet .signature .signature-label{writing-mode:vertical-rl;letter-spacing:.25em}
+body.pet .art-interlude{background:#4a3b2d;color:#ebd9c2}
+body.pet .art-interlude h3{font-family:'Cormorant Garamond';font-size:clamp(45px,5vw,79px)}
+/* La Bottega — refined Mediterranean typography */
+body.lb h1{font-family:'Italiana',serif!important;font-size:clamp(67px,8vw,126px)!important;letter-spacing:-.03em!important;line-height:1.045!important;margin:26px 0 32px!important}
+body.lb h1 em{font-size:clamp(57px,7.1vw,100px)!important;letter-spacing:-.012em!important;line-height:1.08}
+body.lb h2{font-family:'Italiana',serif!important;font-size:clamp(52px,6.1vw,88px)!important;letter-spacing:-.024em!important;line-height:1.12!important}
+body.lb .hero{min-height:700px}
+body.lb .moodText h3{font-size:clamp(46px,4.8vw,66px);line-height:1.12}
+body.lb .signature{right:7%;top:11%;color:#f6ede2;border:1px solid #f6eee0bb;border-radius:50%;height:123px;width:123px;display:grid;place-items:center;text-align:center;transform:rotate(18deg)}
+body.lb .signature-label{font-family:'Italiana',serif!important;font-size:17px!important;letter-spacing:0!important;line-height:1.25!important}
+body.lb .art-interlude{background:#e2d0ba;color:#453b2c}
+body.lb .art-interlude h3{font-family:'Italiana';font-size:clamp(42px,4.5vw,69px);line-height:1.2}
+/* EXS — Swiss information design with blueprint character */
+body.exs h1{font-family:'Manrope',sans-serif!important;font-weight:650!important;font-size:clamp(52px,5.9vw,92px)!important;line-height:1.02!important;letter-spacing:-.055em!important;margin:25px 0 30px!important}
+body.exs h2{font-family:'Manrope',sans-serif!important;font-weight:600!important;font-size:clamp(47px,5.25vw,77px)!important;line-height:1.06!important;letter-spacing:-.045em!important}
+body.exs .process h2{font-size:clamp(49px,5.2vw,77px)!important}
+body.exs .box h3{font-family:'Manrope';font-size:28px;letter-spacing:-.04em;line-height:1.18}
+body.exs .hero{min-height:680px}
+body.exs .copy{padding-top:75px}
+body.exs .signature{top:5%;right:7%;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;color:#e4f8f5}
+body.exs .signature .cross{font:300 52px 'Space Grotesk'}
+body.exs .art-interlude{background:#d1e0d9;color:#15434a;border-block:1px solid #b8d4cb}
+body.exs .art-interlude h3{font-family:'Manrope';font-size:clamp(38px,4.25vw,63px);font-weight:600;letter-spacing:-.045em}
+/* Anne — soft luxury without enormous text */
+body.anne h1{font-size:clamp(66px,7.85vw,118px)!important;line-height:1.02!important;letter-spacing:-.036em!important;margin:35px 0 29px!important}
+body.anne h2{font-size:clamp(59px,6.4vw,97px)!important;line-height:1.02!important;letter-spacing:-.028em!important}
+body.anne .journGrid article h3{font-size:clamp(41px,4vw,58px);line-height:1.13}
+body.anne .hero{min-height:730px}
+body.anne .heroText{padding-top:20px}
+body.anne .signature{right:18%;top:4%;color:#745a50;transform:rotate(10deg)}
+body.anne .signature svg{width:100px;height:78px;fill:none;stroke:#a98377;stroke-width:1.2}
+body.anne .art-interlude{background:#dcc9bd;color:#665046}
+body.anne .art-interlude h3{font-family:'Cormorant Garamond';font-size:clamp(47px,5vw,78px)}
+/* Trio — friendlier lettering, generous breathing room */
+body.trio h1{font-family:'Outfit',sans-serif!important;font-weight:800!important;font-size:clamp(69px,7.4vw,115px)!important;letter-spacing:-.065em!important;line-height:.97!important;margin:31px 0 35px!important}
+body.trio h2{font-family:'Outfit',sans-serif!important;font-weight:750!important;font-size:clamp(53px,6vw,87px)!important;letter-spacing:-.055em!important;line-height:1.025!important}
+body.trio .hero{min-height:680px}
+body.trio .heroCopy{padding-top:65px;padding-bottom:65px}
+body.trio .menuCard h3{font-family:'Outfit';font-size:23px;letter-spacing:-.025em}
+body.trio .signature{right:8%;top:12%;background:#f5de94;color:#314732;border-radius:49% 51% 43% 57%;padding:33px 20px;transform:rotate(12deg);border:2px solid #28503b}
+body.trio .signature-label{text-align:center;font:800 16px/1.25 'Outfit',sans-serif!important;letter-spacing:-.03em!important}
+body.trio .art-interlude{background:#ea8b59;color:#222f25}
+body.trio .art-interlude h3{font-family:'Outfit';font-size:clamp(37px,4.3vw,62px);font-weight:750;letter-spacing:-.05em}
+/* AY-VY — type-forward but readable nightlife art direction */
+body.ayvy h1{font-family:'Manrope',sans-serif!important;font-weight:750!important;font-size:clamp(66px,7.4vw,110px)!important;letter-spacing:-.058em!important;line-height:1!important;margin:33px 0 30px!important}
+body.ayvy h1 em{font-family:'Cormorant Garamond',serif!important;font-size:clamp(77px,8.4vw,133px)!important;line-height:.97!important;letter-spacing:-.025em!important}
+body.ayvy h2{font-family:'Manrope',sans-serif!important;font-size:clamp(51px,5.9vw,86px)!important;line-height:1.035!important;letter-spacing:-.048em!important}
+body.ayvy .hero{min-height:700px}
+body.ayvy .scene h3{font-size:clamp(41px,4.5vw,57px);line-height:1.06}
+body.ayvy .signature{right:9%;top:21%;color:#ffd0ea;text-align:center}
+body.ayvy .signature .disc{width:120px;height:120px;border-radius:50%;border:1px solid #ff99df;display:grid;place-items:center;box-shadow:0 0 0 15px #d85a9d1c,0 0 0 31px #d85a9d14;animation:artbreathe 5s ease-in-out infinite}
+body.ayvy .signature .disc:before{content:'✳';font:400 45px 'Cormorant Garamond'}
+body.ayvy .signature-label{margin-top:28px}
+body.ayvy .art-interlude{background:#4d174a;color:#ffc2e0}
+body.ayvy .art-interlude h3{font-family:'Cormorant Garamond';font-size:clamp(54px,6vw,93px)}
+/* Index — smart restrained display & precise grid */
+body:has(.wrapper) h1{font-size:clamp(72px,8.3vw,127px)!important;line-height:1!important;letter-spacing:-.038em!important}
+body:has(.wrapper) .item h2{font-size:clamp(28px,3.1vw,46px)!important;line-height:1.07!important;letter-spacing:-.014em!important}
+body:has(.wrapper) .item{min-height:400px}
+body:has(.wrapper) .item:before{content:'';position:absolute;inset:14px;z-index:2;border:1px solid #ffffff23;pointer-events:none;transition:inset .5s}
+body:has(.wrapper) .item:hover:before{inset:20px}
+body:has(.wrapper) .item small{font-size:10px}
+@keyframes artspin{to{transform:rotate(360deg)}}@keyframes artscan{to{top:calc(100% - 12px)}}@keyframes artbreathe{50%{transform:scale(1.065)}}
+@media(max-width:1100px){
+ body.vault .signature,body.oryx .signature{right:5%;top:16%;opacity:.75}
+ body.anne .signature{right:7%}
+ body.ayvy .signature{right:8%;top:14%}
+ body.oryx .hero .content{max-width:75%}
+ body.trio .signature{right:6%}
+ body .art-interlude{padding:65px 5vw}
+}
+@media(max-width:800px){
+ body h1{hyphens:manual}
+ body .art-interlude{grid-template-columns:1fr;min-height:310px;gap:25px;padding:66px 5vw}
+ body .art-interlude p{justify-self:start}
+ body .signature:not(.allow-mobile){display:none}
+ body.oryx h1{font-size:clamp(49px,10.3vw,77px)!important;line-height:1.04!important}
+ body.oryx h2{font-size:clamp(40px,8vw,65px)!important}
+ body.oryx .hero .content{max-width:100%}
+ body.vault h1{font-size:clamp(57px,10.6vw,81px)!important;line-height:1.02!important}
+ body.vault h2{font-size:clamp(42px,8vw,66px)!important}
+ body.approved h1{font-size:clamp(51px,10vw,79px)!important;line-height:1.02!important}
+ body.approved h2{font-size:clamp(43px,8.6vw,68px)!important}
+ body.west h1{font-size:clamp(63px,11vw,91px)!important}
+ body.west h2{font-size:clamp(53px,9.5vw,79px)!important}
+ body.pet h1{font-size:clamp(67px,11vw,94px)!important}
+ body.pet h2{font-size:clamp(54px,9.6vw,83px)!important}
+ body.lb h1{font-size:clamp(68px,10.8vw,95px)!important}
+ body.lb h1 em{font-size:clamp(65px,10vw,89px)!important}
+ body.lb h2{font-size:clamp(52px,9.2vw,78px)!important}
+ body.exs h1{font-size:clamp(52px,9.8vw,82px)!important}
+ body.exs h2{font-size:clamp(44px,8.5vw,72px)!important}
+ body.anne h1{font-size:clamp(66px,11vw,96px)!important}
+ body.anne h2{font-size:clamp(55px,9.5vw,84px)!important}
+ body.trio h1{font-size:clamp(68px,12vw,98px)!important}
+ body.trio h2{font-size:clamp(52px,9vw,78px)!important}
+ body.ayvy h1{font-size:clamp(65px,11vw,93px)!important}
+ body.ayvy h1 em{font-size:clamp(76px,13vw,116px)!important}
+ body.ayvy h2{font-size:clamp(50px,9vw,74px)!important}
+ body:has(.wrapper) h1{font-size:clamp(66px,10.8vw,92px)!important}
+ body:has(.wrapper) .item{min-height:340px}
+}
+@media(max-width:500px){
+ body .hero h1,body .hero h2{max-width:100%}
+ body.oryx h1{font-size:clamp(44px,11.5vw,58px)!important}
+ body.approved h1{font-size:clamp(48px,11vw,65px)!important}
+ body.trio h1{font-size:clamp(66px,16vw,82px)!important}
+ body.ayvy h1{font-size:clamp(61px,12.5vw,79px)!important}
+ body.ayvy h1 em{font-size:clamp(75px,16vw,100px)!important}
+ body.exs h1{font-size:clamp(49px,10vw,63px)!important}
+ body.lb h1{font-size:clamp(64px,12vw,86px)!important}
+ body.west h1,body.pet h1,body.anne h1{font-size:clamp(64px,13vw,83px)!important}
+ body.west .hero,body.anne .hero{overflow:hidden}
+ body .story-chips span{font-size:8px}
+ body .art-interlude h3{font-size:clamp(37px,9vw,54px)!important}
+}
+@media(prefers-reduced-motion:reduce){body .signature,body .signature *{animation:none!important;transition:none!important}}
