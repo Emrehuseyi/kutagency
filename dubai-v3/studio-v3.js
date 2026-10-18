@@ -1,0 +1,34 @@
+(()=>{
+'use strict';
+const q=(s,p=document)=>p.querySelector(s);
+const body=document.body,mode=[...body.classList].find(x=>['oryx','vault','approved','west','pet','lb','exs','anne','trio','ayvy'].includes(x));
+if(!mode)return;
+const mk=(html)=>{const x=document.createElement('div');x.innerHTML=html.trim();return x.firstElementChild};
+const signatures={
+ oryx:['.hero','<div class="signature signature-oryx"><div class="reticle"></div><span class="signature-label">LIGHT / FINISH / FORM</span></div>'],
+ vault:['.heroPic','<div class="signature signature-vault"><div class="scanbox"></div><span class="signature-label">SURFACE ANALYSIS<br>STUDY / 2026</span></div>'],
+ approved:['.heroImage','<div class="signature signature-approved"><span class="signature-label">SURFACE / PROTECTION</span><span class="signature-caption">A MORE PRECISE<br>DIGITAL JOURNEY.</span></div>'],
+ west:['.heroImg','<div class="signature signature-west"><span class="signature-label">PORTFOLIO STUDY</span><div class="large-index">01—04</div><span class="signature-label">AN EDITORIAL POINT<br>OF VIEW</span></div>'],
+ pet:['.heroImage','<div class="signature signature-pet"><span class="signature-label">MATERIAL / LIGHT / SPACE</span></div>'],
+ lb:['.hero','<div class="signature signature-lb"><span class="signature-label">A NEW<br>POINT OF<br>VIEW</span></div>'],
+ exs:['.mainPic','<div class="signature signature-exs"><span class="signature-label">SPATIAL STUDY<br>FIG. 001<br>PROPORTION / LIGHT</span><span class="cross">＋</span></div>'],
+ anne:['.heroPics','<div class="signature signature-anne"><svg viewBox="0 0 120 85" aria-hidden="true"><path d="M7 48C13 21 40 8 69 12s47 25 42 42c-6 23-41 27-71 20S-1 59 7 48Z"/><path d="M23 42c18-24 62-27 81-7"/></svg><span class="signature-label">A LIFE WELL LIVED</span></div>'],
+ trio:['.heroImg','<div class="signature signature-trio"><span class="signature-label">GOOD IDEAS<br>BREW HERE ✳</span></div>'],
+ ayvy:['.hero','<div class="signature signature-ayvy"><div class="disc"></div><span class="signature-label">MOOD / IN MOTION</span></div>']
+};
+const [selector,html]=signatures[mode];const stage=q(selector);if(stage){if(getComputedStyle(stage).position==='static')stage.style.position='relative';stage.appendChild(mk(html));let raf=0;stage.addEventListener('pointermove',e=>{if(raf)return;raf=requestAnimationFrame(()=>{const r=stage.getBoundingClientRect();const mx=(e.clientX-r.left)/r.width-.5;const my=(e.clientY-r.top)/r.height-.5;stage.style.setProperty('--mx',mx.toFixed(3));stage.style.setProperty('--my',my.toFixed(3));raf=0})},{passive:true})}
+const panels={
+ oryx:{after:'.ticker',label:'AN EYE FOR THE ESSENTIAL',title:'The difference is <i>in the detail.</i>',text:'A confident visual system that works as precisely as the studio it represents. Quiet proof beats loud promises.',chips:['SURFACE','MOTION','PRECISION']},
+ vault:{after:'.catalog',label:'A NEW STANDARD / EXPERIENCE',title:'Every interaction <i>considered.</i>',text:'We paired precise navigation with restrained motion so the work can speak without competing with the interface.',chips:['DISCOVER','REFINE','CONNECT']},
+ approved:{after:'.ribbon',label:'DESIGN / PURPOSE / PERFORMANCE',title:'Built for the moments <i>that matter.</i>',text:'Information that feels immediate. Imagery that feels intentional. No needless visual noise.',chips:['EXPLORE','COMPARE','ENQUIRE']},
+ pet:{after:'.marquee',label:'AN EDITORIAL NOTE',title:'The most beautiful spaces invite you <i>to stay.</i>',text:'An unhurried online gallery of material, light and thoughtful storytelling — a study in elegant pacing.',chips:['PLACE','PRESENCE','PERSPECTIVE']},
+ exs:{after:'.numbers',label:'BEYOND THE BLUEPRINT',title:'Structure meets <i>feeling.</i>',text:'Architectural storytelling should be as legible as the plans behind it. Clear navigation, generous white space, and purposeful motion.',chips:['FORM','FUNCTION','HUMAN EXPERIENCE']},
+ trio:{after:'.ribbon',label:'THE LITTLE THINGS MATTER',title:'A little brighter. <i>A lot more memorable.</i>',text:'We took a playful approach with punchy layouts, illustrated brand gestures and an interactive menu concept.',chips:['SIP','PAUSE','REPEAT']}
+};
+if(panels[mode]){const d=panels[mode],anchor=q(d.after);if(anchor){const el=mk('<section class="art-interlude" aria-label="Art direction note"><div><span class="interlude-overline">'+d.label+'</span><h3>'+d.title+'</h3><div class="story-chips">'+d.chips.map(s=>'<span>'+s+'</span>').join('')+'</div></div><p>'+d.text+'</p></section>');anchor.insertAdjacentElement('afterend',el)}}
+if(mode==='west'){const hero=q('.west .hero .reveal');if(hero){const control=mk('<div class="mood-control"><span>VIEWING MOOD</span><button type="button" data-west-light>DAYLIGHT / DUSK ↗</button></div>');hero.appendChild(control);q('[data-west-light]',control)?.addEventListener('click',e=>{body.classList.toggle('is-dusk');e.currentTarget.textContent=body.classList.contains('is-dusk')?'DUSK / DAYLIGHT ↗':'DAYLIGHT / DUSK ↗'})}}
+if(mode==='ayvy'){const e=q('.experience');if(e){const control=mk('<div class="night-control" style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin:20px 0 4px;color:#f9c4dd;font:500 10px DM Mono"><span>SHIFT THE MOOD ↗</span><input type="range" min="0" max="100" value="20" aria-label="Adjust ambient visual glow" data-ambient style="accent-color:#eb5f9d;width:165px"><span data-ambient-state>SOFT / PINK</span></div>');q('.exHead',e)?.insertAdjacentElement('afterend',control);q('[data-ambient]',control)?.addEventListener('input',t=>{const v=+t.target.value;e.style.setProperty('--ambient',v+'%');e.style.background='linear-gradient(120deg,hsl('+Math.round(310-v*.42)+',38%,'+(18+v*.06)+'%),#29132f)';q('[data-ambient-state]',control).textContent=v>65?'ELECTRIC / VIOLET':v>30?'NEON / ROSE':'SOFT / PINK'})}}
+if(mode==='trio'){const menu=q('.menu');if(menu){const sticker=mk('<span class="menu-sticker" style="display:inline-block;background:#284a38;color:#fff;font:700 11px DM Mono;padding:12px 22px;border-radius:40px;transform:rotate(-2deg);margin-bottom:30px">✳ YOUR OWN HAPPY MENU</span>');q('.menuHead',menu)?.insertAdjacentElement('beforebegin',sticker)}}
+if(mode==='lb'){const gallery=q('.mosaic');if(gallery){const tag=mk('<div class="editorial-stamp" style="border-left:1px solid currentColor;padding-left:20px;opacity:.6;margin-top:30px">AN IMAGE-LED STUDY / 03 DIRECTIONS / DETAIL ABOVE ALL</div>');gallery.insertAdjacentElement('afterend',tag)}}
+if(mode==='anne'){const mat=q('.material');if(mat){const stamp=mk('<div class="editorial-stamp" style="border-bottom:1px solid #d2c3b5;padding-bottom:14px;color:#a27d72;margin-bottom:20px">TEXTURE IS A MEMORY / AN INTERACTIVE EXPERIMENT</div>');q('.reveal',mat)?.prepend(stamp)}}
+})();
